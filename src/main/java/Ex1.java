@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class Ex1 {
@@ -8,11 +10,17 @@ public class Ex1 {
     }
 
     // 1-2
-    public static void assign1toN (int[] array, int N) {
+    public static List<Integer> assign1toN (int N) {
+        var list = new ArrayList<Integer>();
+        // add here
+        return list;
     }
 
     // 1-3
-    public static void assign1toNofEven (int[] array, int N) {
+    public static List<Integer> assign1toNofEven (int N) {
+        var list = new ArrayList<Integer>();
+        // add here
+        return list;
     }
 
     // 1-4
@@ -26,17 +34,20 @@ public class Ex1 {
     }
 
     // 1-6
-    public static int total (int[] array) {
+    public static int total (List<Integer> list) {
         return 0;
     }
 
     // 1-7
-    public static double average (int[] array) {
+    public static double average (List<Integer> list) {
         return 0;
     }
 
     // 1-8
-    public static void table9x9(int[] array) {
+    public static List<Integer> table9x9() {
+        var list = new ArrayList<Integer>();
+        // add here
+        return list;
     }
 
     // 1-9
@@ -55,7 +66,10 @@ public class Ex1 {
     }
 
     // 1-12
-    public static void perpetualCalendar (int[] array, int year, int month) {
+    public static List<Integer> perpetualCalendar (int year, int month) {
+        var list = new ArrayList<Integer>();
+        // add here
+        return list;
     }
 
     // 1-o1
@@ -79,20 +93,12 @@ public class Ex1 {
         // 1-2
         System.out.println("\nEx1-2 ============");
         int N = 10;
-        int[] array = new int[N];
-        assign1toN(array, N);
-        for (int i=0 ; i<10 ; i++) {
-            System.out.format("%d ", array[i]);
-        }
+        System.out.println(assign1toN(N));
         System.out.println("");
 
         // 1-3
         System.out.println("\nEx1-3 ============");
-        array = new int[5];
-        assign1toNofEven(array, N);
-        for (int i=0 ; i<5 ; i++) {
-            System.out.format("%d ", array[i]);
-        }
+        System.out.println(assign1toNofEven(N));
         System.out.println("");
 
         // 1-4
@@ -117,24 +123,25 @@ public class Ex1 {
 
         // 1-6
         System.out.println("\nEx1-6 ============");
-        System.out.println(total(new int[]{1,2}));     
-        System.out.println(total(new int[]{1,2,3,4,5}));
-        System.out.println(total(new int[]{1,2,3,4,5,6,7,8,9,10}));   
+        System.out.println(total(List.of(1,2)));
+        System.out.println(total(List.of(1,2,3,4,5)));
+        System.out.println(total(List.of(1,2,3,4,5,6,7,8,9,10)));
 
         // 1-7
         System.out.println("\nEx1-7 ============");
-        System.out.println(average(new int[]{1,2}));     
-        System.out.println(average(new int[]{1,2,3,4,5}));
-        System.out.println(average(new int[]{1,2,3,4,5,6,7,8,9,10}));   
-        
+        System.out.println(average(List.of(1,2)));
+        System.out.println(average(List.of(1,2,3,4,5)));
+        System.out.println(average(List.of(1,2,3,4,5,6,7,8,9,10)));
+
         // 1-8
         System.out.println("\nEx1-8 ============");
-        array = new int[9*9];
-        table9x9(array);
-        for (int i=0 ; i<81 ; i++) {
-            System.out.format("%2d ", array[i]);
-            if ((i+1) % 9 == 0) {
-                System.out.println("");
+        {
+            var l = table9x9();
+            for (int i=0 ; i<81 ; i++) {
+                System.out.format("%2d ", l.get(i));
+                if ((i+1) % 9 == 0) {
+                    System.out.println("");
+                }
             }
         }
 
@@ -157,17 +164,18 @@ public class Ex1 {
 
         // 1-12
         System.out.println("\nEx1-12 ============");
-        array = new int[37];
-        perpetualCalendar(array, 2020, 2);
-        System.out.println("Su Mo Tu We Th Fr Sa");
-        for (int i=0 ; i<37 ; i++) {
-            if (array[i] == 0) {
-                System.out.format("   ");
-            }else{
-                System.out.format("%2d ", array[i]);
-            }
-            if ((i+1) % 7 == 0) {
-                System.out.println("");
+        {
+            var l = perpetualCalendar(2020, 2);
+            System.out.println("Su Mo Tu We Th Fr Sa");
+            for (int i=0 ; i<l.size() ; i++) {
+                if (l.get(i) == 0) {
+                    System.out.format("   ");
+                }else{
+                    System.out.format("%2d ", l.get(i));
+                }
+                if ((i+1) % 7 == 0) {
+                    System.out.println("");
+                }
             }
         }
     }
