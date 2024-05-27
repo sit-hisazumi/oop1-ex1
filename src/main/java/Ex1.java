@@ -94,12 +94,12 @@ public class Ex1 {
         System.out.println("\nEx1-2 ============");
         int N = 10;
         System.out.println(assign1toN(N));
-        System.out.println("");
+        System.out.println();
 
         // 1-3
         System.out.println("\nEx1-3 ============");
         System.out.println(assign1toNofEven(N));
-        System.out.println("");
+        System.out.println();
 
         // 1-4
         System.out.println("\nEx1-4 ============");
@@ -140,7 +140,7 @@ public class Ex1 {
             for (int i=0 ; i<81 ; i++) {
                 System.out.format("%2d ", l.get(i));
                 if ((i+1) % 9 == 0) {
-                    System.out.println("");
+                    System.out.println();
                 }
             }
         }
@@ -174,7 +174,7 @@ public class Ex1 {
                     System.out.format("%2d ", l.get(i));
                 }
                 if ((i+1) % 7 == 0) {
-                    System.out.println("");
+                    System.out.println();
                 }
             }
         }
