@@ -9,8 +9,8 @@ public class Ex1Test {
     @Test
     public void testAdd() {
         assertEquals("less than 10", Ex1.compareTo10(9));
-        assertEquals("over or equal to 10", Ex1.compareTo10(10));
-        assertEquals("over or equal to 10", Ex1.compareTo10(11));
+        assertEquals("10 or more", Ex1.compareTo10(10));
+        assertEquals("10 or more", Ex1.compareTo10(11));
     }
 
     @Test
