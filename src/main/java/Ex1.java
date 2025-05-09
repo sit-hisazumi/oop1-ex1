@@ -137,7 +137,7 @@ public class Ex1 {
         System.out.println("\nEx1-8 ============");
         {
             var l = table9x9();
-            for (int i=0 ; i<81 ; i++) {
+            for (int i=0 ; i<l.size() ; i++) {
                 System.out.format("%2d ", l.get(i));
                 if ((i+1) % 9 == 0) {
                     System.out.println();
